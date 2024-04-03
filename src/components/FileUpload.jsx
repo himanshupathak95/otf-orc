@@ -89,23 +89,38 @@ const FileUpload = () => {
         onDragOver={(e) => handleOver(e)}
         onDrop={(e) => handleUpload(e)}
         // className={`upload${highlight ? " is-highlight" : drop ? " is-drop" : ""}`}
-        className="flex items-center justify-center w-72 h-72 text-white font-['Montserrat'] bg-blue-500 rounded-lg"
-        style={{ backgroundImage: `url(${preview})` }}
+        // className="flex items-center justify-center w-72 h-72 text-white font-['Montserrat'] bg-blue-500 rounded-lg"
+        // style={{ backgroundImage: `url(${preview})` }}
+        className={`flex items-center justify-center w-98 h-96 text-white font-['Montserrat'] bg-blue-500 rounded-lg relative overflow-hidden outline outline-2 outline-white/30 outline-offset-4
+                  ${highlight ? 'bg-blue-500/50' : ''} 
+                  ${drop ? 'opacity-70' : ''}`}
       >
+        {preview && (
+                <img src={preview} alt="Uploaded preview" className="absolute inset-0 object-cover w-full h-full" />
+            )}
         <form className="form">
-          <p>Drag and Drop image here</p>
+          <p
+            className={`text-sm uppercase tracking-wide ${drop ? 'opacity-0' : ''}`}>
+            Drag and Drop image here
+          </p>
           <div 
             // className="upload-button-wrap"
+            // className="upload-button-wrap absolute bottom-0 left-0 w-52"
             className="upload-button-wrap absolute bottom-0 left-0 w-52"
           >
             <input
               type="file"
               // className="upload-file"
-              className="opacity-0 w-full h-full absolute bottom-0 left-0" 
+              // className="opacity-0 w-full h-full absolute bottom-0 left-0" 
+              className="opacity-0 w-full h-full absolute bottom-0 left-0 cursor-pointer"
               accept="image/*"
               onChange={(e) => handleUpload(e)}
             />
-            { !fileUploaded && <button className="flex items-center justify-center mt-2 w-full h-12 text-sm font-bold uppercase text-white bg-black" >FileUpload Here</button>}
+            { !fileUploaded && <button 
+            // className="flex items-center justify-center mt-2 w-full h-12 text-sm font-bold uppercase text-white bg-black" >FileUpload Here
+            className="flex items-center justify-center mt-2 w-full h-12 text-sm font-bold uppercase text-white bg-black">
+              FileUpload Here
+            </button>}
           </div>
         </form>
       </div>
