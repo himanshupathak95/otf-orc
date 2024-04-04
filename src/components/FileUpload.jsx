@@ -1,4 +1,15 @@
 import React, { useState } from "react";
+import Heading from "./Heading";
+
+const getParagraphs = (responseData) =>
+  responseData.substring(0, responseData.indexOf("Here")).split("\n");
+
+const getAlternatives = (responseData) =>
+  responseData
+    .substring(responseData.indexOf("*"), responseData.length)
+    .split(".\n");
+
+const getRating = (responseData) => responseData.match(/\d/)[0];
 
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);
@@ -121,7 +132,7 @@ const FileUpload = () => {
           </div>
         </form>
       </div>
-      <div className="ml-6 text-white transition-opacity duration-300 outline outline-2 outline-white/30 outline-offset-4 rounded-3xl ">
+      <div className="ml-3 text-white transition-opacity duration-300 outline outline-2 outline-white/30 outline-offset-4 rounded-3xl items-centre">
         {showInstructions && (
           <p className="flex items-center justify-center h-full text-center">
             Instructions: Drag and drop your image here...
@@ -133,18 +144,40 @@ const FileUpload = () => {
           </p>
         )}
         {!showInstructions && !isLoading && responseData && (
-          <>
-            {responseData.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {index === 0 ? (
-                  <p className="p-2 pt-3 pl-3 pr-3 text-centre">{line}</p>
-                ) : (
-                  <p className="p-2 pt-0 pl-3 pr-3 text-centre">{line}</p>
-                )}
-              </React.Fragment>
-            ))}
-          </>
+          <div className="flex flex-col justify-center ">
+            {getParagraphs(responseData).map((line, index) =>
+              index === 0 ? (
+                <p key={index} className="p-2 pt-10 pl-15 pr-15 text-centre">
+                  {line}
+                </p>
+              ) : (
+                <p key={index} className="p-2 pt-0 pl-15 pr-15 text-centre">
+                  {line}
+                </p>
+              )
+            )}
+          </div>
         )}
+      </div>
+      <div className="mt-4 text-white">
+        {responseData && !isLoading && (
+          <h4 class="flex h4 text-centre justify-center pt-20">
+            Alternatives Choices
+          </h4>
+        )}
+        {responseData &&
+          !isLoading &&
+          getAlternatives(responseData).map((line, index) =>
+            index === 0 ? (
+              <p key={index} className="p-2 pt-5 pl-15 pr-15 text-centre">
+                {line}
+              </p>
+            ) : (
+              <p key={index} className="p-2 pt-0 pl-15 pr-15 text-centre">
+                {line}
+              </p>
+            )
+          )}
       </div>
       {console.log(responseData)}
     </>
