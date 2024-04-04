@@ -144,7 +144,7 @@ const FileUpload = () => {
           </p>
         )}
         {!showInstructions && !isLoading && responseData && (
-          <div className="flex flex-col justify-center ">
+          <div className="flex flex-col items-center justify-center ">
             {getParagraphs(responseData).map((line, index) =>
               index === 0 ? (
                 <p key={index} className="p-2 pt-10 pl-15 pr-15 text-centre">
@@ -159,25 +159,30 @@ const FileUpload = () => {
           </div>
         )}
       </div>
-      <div className="mt-4 text-white">
-        {responseData && !isLoading && (
-          <h4 class="flex h4 text-centre justify-center pt-20">
-            Alternatives Choices
-          </h4>
-        )}
-        {responseData &&
-          !isLoading &&
-          getAlternatives(responseData).map((line, index) =>
-            index === 0 ? (
-              <p key={index} className="p-2 pt-5 pl-15 pr-15 text-centre">
-                {line}
-              </p>
-            ) : (
-              <p key={index} className="p-2 pt-0 pl-15 pr-15 text-centre">
-                {line}
-              </p>
-            )
+      <div className="flex text-white outline outline-2 outline-white/30 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
+        {responseData && !isLoading && getRating(responseData)}
+      </div>
+      <div className="flex flex-row items-stretch w-full">
+        <div className="outline outline-2 outline-white/30 outline-offset-4 rounded-3xl p-4 flex-1 ml-3 mt-3">
+          {responseData && !isLoading && (
+            <h4 className="flex h4 text-centre items-center justify-center pt-10  ">
+              Alternatives Choices
+            </h4>
           )}
+          {responseData &&
+            !isLoading &&
+            getAlternatives(responseData).map((line, index) =>
+              index === 0 ? (
+                <p key={index} className="p-2 pt-5 pl-15 pr-15 text-centre">
+                  {line}
+                </p>
+              ) : (
+                <p key={index} className="p-2 pt-0 pl-15 pr-15 text-centre">
+                  {line}
+                </p>
+              )
+            )}
+        </div>
       </div>
       {console.log(responseData)}
     </>
