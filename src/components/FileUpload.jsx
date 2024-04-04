@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-``;
+
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);
   const [preview, setPreview] = useState("");
   const [drop, setDrop] = useState(false);
   const [fileUploaded, setFileUploaded] = useState(false);
   const [responseData, setResponseData] = useState("");
+  const [showInstructions, setShowInstructions] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleEnter = (e) => {
     e.preventDefault();
@@ -39,6 +41,8 @@ const FileUpload = () => {
 
     uploadFile(file);
     setFileUploaded(true);
+    setShowInstructions(false);
+    setIsLoading(true);
   };
 
   function uploadFile(file) {
@@ -46,18 +50,14 @@ const FileUpload = () => {
     reader.readAsBinaryString(file);
 
     reader.onload = () => {
-      // this is the base64 data
       const fileRes = btoa(reader.result);
       console.log(`data:image/jpg;base64,${fileRes}`);
       setPreview(`data:image/jpg;base64,${fileRes}`);
 
-      // Create a new FormData object
       const formData = new FormData();
-      // Append the file
       console.log(file);
       formData.append("file", file);
 
-      // Make a POST request to your backend
       fetch("http://localhost:3000/upload", {
         method: "POST",
         body: formData,
@@ -71,7 +71,11 @@ const FileUpload = () => {
           setResponseData(data.data);
         })
         .catch((error) => {
+          setIsLoading(false);
           console.error(error);
+        })
+        .finally(() => {
+          setIsLoading(false);
         });
     };
 
@@ -121,9 +125,31 @@ const FileUpload = () => {
           </div>
         </form>
       </div>
-      {responseData.split("\n").map((line, index) => (
-        <p key={index}>{line}</p>
-      ))}
+      <div className="ml-6 text-gray-400 transition-opacity duration-300 outline outline-2 outline-white/30 outline-offset-4 rounded-3xl ">
+        {showInstructions && (
+          <p className="flex items-center justify-center h-full text-center">
+            Instructions: Drag and drop your image here...
+          </p>
+        )}
+        {isLoading && (
+          <p className="flex items-center justify-center h-full text-center">
+            Loading...
+          </p>
+        )}
+        {!showInstructions && !isLoading && responseData && (
+          <>
+            {responseData.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {index === 0 ? (
+                  <p className="p-2 pt-3 pl-3 pr-3 text-centre">{line}</p>
+                ) : (
+                  <p className="p-2 pt-0 pl-3 pr-3 text-centre">{line}</p>
+                )}
+              </React.Fragment>
+            ))}
+          </>
+        )}
+      </div>
       {console.log(responseData)}
     </>
   );
