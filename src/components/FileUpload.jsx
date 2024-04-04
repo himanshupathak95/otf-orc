@@ -91,7 +91,7 @@ const FileUpload = () => {
         onDragLeave={(e) => handleLeave(e)}
         onDragOver={(e) => handleOver(e)}
         onDrop={(e) => handleUpload(e)}
-        className={`flex items-center justify-center w-98 h-96   text-white font-['sohne'] bg-transparent rounded-3xl relative overflow-hidden outline outline-2 outline-white/30 outline-offset-4
+        className={`flex items-center justify-center w-98 h-[75vh] text-white  bg-transparent rounded-3xl relative overflow-hidden outline outline-2 outline-white/30 outline-offset-4
                   ${highlight ? "bg-blue-500/50" : ""} 
                   ${drop ? "opacity-70" : ""}`}
       >
@@ -103,11 +103,7 @@ const FileUpload = () => {
           />
         )}
         <form className="form">
-          <p
-            className={`text-sm uppercase tracking-wide ${
-              drop ? "opacity-0" : ""
-            }`}
-          >
+          <p className={`text-sm text-white ${drop ? "opacity-0" : ""}`}>
             Drag and Drop image here
           </p>
           <div className="upload-button-wrap absolute bottom-0 left-0 w-52">
@@ -118,14 +114,14 @@ const FileUpload = () => {
               onChange={(e) => handleUpload(e)}
             />
             {!fileUploaded && (
-              <button className="flex items-center justify-center mt-2 w-full h-12 text-sm font-bold uppercase text-white outline outline-2 outline-white/30 rounded-lg outline-offset-4">
+              <button className="flex items-center justify-center mt-2 w-full h-12 text-sm   text-white outline outline-2 outline-white/30 rounded-lg outline-offset-4">
                 Click to upload
               </button>
             )}
           </div>
         </form>
       </div>
-      <div className="ml-6 text-gray-400 transition-opacity duration-300 outline outline-2 outline-white/30 outline-offset-4 rounded-3xl ">
+      <div className="ml-6 text-white transition-opacity duration-300 outline outline-2 outline-white/30 outline-offset-4 rounded-3xl ">
         {showInstructions && (
           <p className="flex items-center justify-center h-full text-center">
             Instructions: Drag and drop your image here...
