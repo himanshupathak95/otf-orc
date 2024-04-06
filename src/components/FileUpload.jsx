@@ -159,32 +159,26 @@ const FileUpload = () => {
           </div>
         )}
       </div>
-      <div className="flex text-white outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
-        {!responseData && <RadialProgressBar rating={0} />}
-        {responseData && !isLoading && (
-          <RadialProgressBar rating={getRating(responseData)} />
-        )}
-      </div>
+      <RadialProgressBar responseData={responseData} isLoading={isLoading}/>
       <div className="flex flex-row items-stretch w-full">
         <div className="outline outline-1 outline-white/20 outline-offset-4 rounded-3xl p-4 flex-1 ml-3 mt-3">
           {responseData && !isLoading && (
-            <h4 className="flex h4 text-centre items-center justify-center pt-10  ">
-              Alternatives Choices
-            </h4>
+            <>
+              <h4 className="flex h4 text-centre items-center justify-center pt-10">
+                Alternatives Choices
+              </h4>
+              {getAlternatives(responseData).map((line, index) => (
+                <p
+                  key={index}
+                  className={`p-2 ${
+                    index === 0 ? "pt-5" : "pt-0"
+                  } pl-15 pr-15 text-centre`}
+                >
+                  {line}
+                </p>
+              ))}
+            </>
           )}
-          {responseData &&
-            !isLoading &&
-            getAlternatives(responseData).map((line, index) =>
-              index === 0 ? (
-                <p key={index} className="p-2 pt-5 pl-15 pr-15 text-centre">
-                  {line}
-                </p>
-              ) : (
-                <p key={index} className="p-2 pt-0 pl-15 pr-15 text-centre">
-                  {line}
-                </p>
-              )
-            )}
         </div>
       </div>
       {console.log(responseData)}
