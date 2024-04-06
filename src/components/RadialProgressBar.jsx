@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const RadialProgressBar = ({ rating }) => {
+const getRating = (responseData) => {
+  let rating = responseData ? responseData.match(/\d/)[0] : 7;
+  return rating == 1 ? 10 : rating;
+}
+
+const Radial = ({ rating }) => {
   return (
     <div
       className="radial-progress text-primary"
       style={{
         "--value": `${rating * 10}`,
         "--size": "20rem",
-        "--thickness": "1rem"
+        "--thickness": "1rem",
       }}
       role="progressbar"
     >
@@ -23,4 +28,16 @@ const RadialProgressBar = ({ rating }) => {
   );
 };
 
+const RadialProgressBar = ({ responseData, isLoading }) => {
+  return (
+    <div className="flex text-white outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
+      {!responseData && <Radial rating={0} />}
+      {responseData && !isLoading && (
+        <Radial rating={getRating(responseData)} />
+      )}
+    </div>
+  );
+};
+
 export default RadialProgressBar;
+
