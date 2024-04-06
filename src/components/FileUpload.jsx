@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RadialProgressBar from "./RadialProgressBar";
 
 const getParagraphs = (responseData) =>
   responseData.substring(0, responseData.indexOf("Here")).split("\n");
@@ -8,7 +9,7 @@ const getAlternatives = (responseData) =>
     .substring(responseData.indexOf("*"), responseData.length)
     .split(".\n");
 
-const getRating = (responseData) => responseData.match(/\d/)[0];
+const getRating = (responseData) => responseData.match(/\d/)[0] || 7;
 
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);
@@ -159,7 +160,10 @@ const FileUpload = () => {
         )}
       </div>
       <div className="flex text-white outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
-        {responseData && !isLoading && getRating(responseData)}
+        {!responseData && <RadialProgressBar rating={0} />}
+        {responseData && !isLoading && (
+          <RadialProgressBar rating={getRating(responseData)} />
+        )}
       </div>
       <div className="flex flex-row items-stretch w-full">
         <div className="outline outline-1 outline-white/20 outline-offset-4 rounded-3xl p-4 flex-1 ml-3 mt-3">
