@@ -1,6 +1,10 @@
 import React from "react";
 
-const getRating = (responseData) => responseData.match(/\d/)[0] || 7;
+const getRating = (responseData) => {
+  let rating = responseData ? responseData.match(/\d/)[0] : 7;
+  return rating == 1 ? 10 : rating;
+}
+
 const Radial = ({ rating }) => {
   return (
     <div

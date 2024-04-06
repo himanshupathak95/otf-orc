@@ -29,7 +29,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     Describe the outfit in the image in the first paragraph.
     Rate the outfit out of 10 (most important part) in the second paragraph and provide appropriate reasoning in the second paragraph.
     Suggest how the current outfit can be improved or accessorized in the third paragraph.
-    Suggest atleast four alternatives for the outfit in the image in the format of an unordered list.`;
+    Suggest atleast four alternatives for the outfit in the image in the format of an unordered list only.`;
     console.log(req.file);
     const imageParts = [
         fileToGenerativePart(req.file.path),
