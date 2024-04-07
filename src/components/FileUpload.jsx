@@ -3,7 +3,7 @@ import RadialProgressBar from "./RadialProgressBar";
 import Alternatives from "./Alternatives";
 import Paragraphs from "./Paragraphs";
 import DragAndDropArea from "./DragAndDropArea";
-import { uploadFile } from "../utils/uploadFile";
+import { uploadFile } from "../../uploadFile";
 
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);

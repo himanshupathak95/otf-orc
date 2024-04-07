@@ -3,6 +3,7 @@ const multer = require('multer');
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 
 require('dotenv').config();
 const app = express();
@@ -10,6 +11,11 @@ const upload = multer({ dest: 'uploads/' });
 app.use(cors({
     origin: 'http://localhost:5173'
 }));
+
+app.use(express.static(path.join(__dirname, "..", "build")));
+app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+});
 
 function fileToGenerativePart(path) {
     return {
@@ -43,4 +49,5 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     res.json({ status: 'success', message: 'Image processed successfully', data: text });
 });
 
-app.listen(3000, () => console.log('Server started on port 3000'));
+const { PORT } = process.env || 3000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
