@@ -10,9 +10,9 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(express.static(path.join(__dirname, "..", "dist")));
 app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "..", "dist", "index.html"));
 });
 const port = process.env.PORT || 3000;
 
