@@ -10,8 +10,9 @@ export function uploadFile(file, setPreview, setResponseData, setIsLoading) {
     formData.append("file", file);
 
     const baseUrl = import.meta.env.VITE_APP_BASE_URL;
+    const url = baseUrl ? `${baseUrl}/upload` : '/upload';
 
-    fetch(`${baseUrl}/upload`, {
+    fetch(url, {
       method: "POST",
       body: formData,
     })
