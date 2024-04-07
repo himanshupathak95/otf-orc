@@ -12,8 +12,8 @@ app.use(cors({
     origin: 'http://localhost:5173'
 }));
 
-api.use(express.static(path.join(__dirname, "..", "build")));
-api.get("/*", (req, res) => {
+app.use(express.static(path.join(__dirname, "..", "build")));
+app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
