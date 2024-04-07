@@ -1,9 +1,15 @@
 import React from "react";
 
 const getRating = (responseData) => {
-  let rating = responseData ? responseData.match(/\d/)[0] : 7;
-  return rating == 1 ? 10 : rating;
-}
+  let rating = 7;
+  if (responseData) {
+    const match = responseData.match(/\d/);
+    if (match) {
+      rating = match[0] === "1" ? 10 : parseInt(match[0], 10);
+    }
+  }
+  return rating;
+};
 
 const Radial = ({ rating }) => {
   return (
@@ -40,4 +46,3 @@ const RadialProgressBar = ({ responseData, isLoading }) => {
 };
 
 export default RadialProgressBar;
-
