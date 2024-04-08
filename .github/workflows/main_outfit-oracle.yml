@@ -60,3 +60,5 @@ jobs:
           slot-name: 'Production'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2929EFA4EDEA4A1496C0838843D27F5E }}
+        env: 
+        API_KEY: ${{ secrets.API_KEY }}
