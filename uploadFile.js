@@ -12,6 +12,7 @@ export function uploadFile(file, setPreview, setResponseData, setIsLoading) {
     const baseUrl = import.meta.env.VITE_APP_BASE_URL;
     const url = baseUrl ? `${baseUrl}/upload` : '/upload';
 
+    console.log("In uploadFile.js, posting the form data - ", formData);
     fetch(url, {
       method: "POST",
       body: formData,
@@ -19,10 +20,11 @@ export function uploadFile(file, setPreview, setResponseData, setIsLoading) {
       .then((response) => response.json())
       .then((data) => {
         setResponseData(data.data);
+        console.log("In uploadFile, The Response data is - ", data.data);
       })
       .catch((error) => {
         setIsLoading(false);
-        console.error(error);
+        console.error("In upload.js, The error is - ", error);
       })
       .finally(() => {
         setIsLoading(false);

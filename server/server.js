@@ -24,7 +24,7 @@ function fileToGenerativePart(path) {
         },
     };
 }
-
+console.log("The API Key is - ", process.env.API_KEY);
 app.post('/upload', upload.single('file'), async (req, res) => {
     const genAI = new GoogleGenerativeAI(process.env.API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
@@ -43,9 +43,9 @@ app.post('/upload', upload.single('file'), async (req, res) => {
     const result = await model.generateContent([prompt, ...imageParts]);
     const response = await result.response;
     const text = response.text();
-    console.log(text);
+    console.log("In server..js, The Response text is -", text);
 
     res.json({ status: 'success', message: 'Image processed successfully', data: text });
 });
-
+console.log("In server.js, The port is - ", port);   
 app.listen(port, () => console.log(`Server started on port ${port}`));
