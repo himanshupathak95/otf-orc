@@ -106,20 +106,20 @@ export default {
             {},
         },
         ".body-2": {
-          "@apply font-light text-[0.875rem] leading-6 md:text-base": {},
+          "@apply font-light font-grotesk text-[0.875rem] leading-6 md:text-base": {},
         },
         ".caption": {
-          "@apply text-sm": {},
+          "@apply text-sm font-grotesk": {},
         },
         ".tagline": {
           "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
             {},
         },
         ".quote": {
-          "@apply font-code text-lg leading-normal": {},
+          "@apply font-grotesk text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
+          "@apply font-grotesk text-xs font-bold uppercase": {},
         },
       });
       addUtilities({
