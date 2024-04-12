@@ -36,7 +36,7 @@ const Hero = () => {
           </h1>
         </div>
         <div className="pt-20 mt-60 relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-          <div className="z-6 relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+          <div className="z-6 relative p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-8 rounded-t-[0.9rem]" />
 
