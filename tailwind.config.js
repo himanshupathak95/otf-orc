@@ -2,10 +2,21 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
-export default {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 100s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      },
       colors: {
         color: {
           1: "#AC6AFF",
@@ -62,6 +73,7 @@ export default {
         3: "3",
         4: "4",
         5: "5",
+        6: "6",
       },
       borderWidth: {
         DEFAULT: "0.0625rem",
@@ -109,7 +121,7 @@ export default {
           "@apply font-light font-grotesk text-[0.875rem] leading-6 md:text-base": {},
         },
         ".caption": {
-          "@apply text-sm font-grotesk": {},
+          "@apply font-grotesk text-sm": {},
         },
         ".tagline": {
           "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
@@ -130,4 +142,4 @@ export default {
     }),
     require("daisyui"),
   ],
-};
+});
