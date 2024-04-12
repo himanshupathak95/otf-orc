@@ -24,6 +24,21 @@ import background from "./background.jpg";
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
 import heroBackground from "./hero/hero-background.jpg";
+import car1 from "./hero/car1.jpg";
+import car2 from "./hero/car2.png";
+import car3 from "./hero/car3.jpg";
+import car4 from "./hero/car4.png";
+import car5 from "./hero/car5.png";
+import car6 from "./hero/car6.jpg";
+import car7 from "./hero/car7.jpg";
+import airbnb from "./hero/airbnb.svg";
+import apple from "./hero/apple.svg";
+import disney from "./hero/disney.svg";
+import fb from "./hero/fb.svg";
+import quora from "./hero/quora.svg";
+import samsung from "./hero/samsung.svg";
+import sass from "./hero/sass.svg";
+import spark from "./hero/spark.svg";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -139,6 +154,21 @@ export {
   benefitIcon3,
   benefitIcon4,
   benefitImage2,
+  car1,
+  car2,
+  car3,
+  car4,
+  car5,
+  car6,
+  car7,
+  airbnb,
+  apple,
+  disney,
+  fb,
+  samsung,
+  sass,
+  spark,
+  quora,
   discordBlack,
   facebook,
   instagram,
