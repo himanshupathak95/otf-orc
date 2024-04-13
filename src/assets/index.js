@@ -39,6 +39,14 @@ import quora from "./hero/quora.svg";
 import samsung from "./hero/samsung.svg";
 import sass from "./hero/sass.svg";
 import spark from "./hero/spark.svg";
+import horse from "./hero/horse.png";
+import dior from "./hero/dior.png";
+import vs from "./hero/vs.png";
+import ysl from "./hero/ysl.png";
+import bazaar from "./hero/bazaar.png";
+import balenciaga from "./hero/balenciaga.png";
+import gucci from "./hero/gucci.png";
+import lv from "./hero/lv.png";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -82,7 +90,7 @@ import benefitIcon1 from "./benefits/icon-1.svg";
 import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
-import benefitImage2 from "./benefits/image-2.png";
+import benefitImage2 from "./benefits/image-2.jpg";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
@@ -169,6 +177,14 @@ export {
   sass,
   spark,
   quora,
+  horse,
+  dior,
+  vs,
+  ysl,
+  bazaar,
+  balenciaga,
+  gucci,
+  lv,
   discordBlack,
   facebook,
   instagram,

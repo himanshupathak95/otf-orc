@@ -1,4 +1,20 @@
-import { airbnb, apple, disney, facebook, quora, samsung, sass, spark } from "../assets";
+import {
+  airbnb,
+  apple,
+  balenciaga,
+  disney,
+  facebook,
+  gucci,
+  quora,
+  samsung,
+  sass,
+  lv,
+  vs,
+  dior,
+  ysl,
+  horse,
+  spark,
+} from "../assets";
 
 const LogoCarousel = () => {
   return (
@@ -9,12 +25,18 @@ const LogoCarousel = () => {
         ul.insertAdjacentHTML('afterend', ul.outerHTML);
         ul.nextSibling.setAttribute('aria-hidden', 'true');
     })"
-      class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
+      className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]"
     >
       <ul
         x-ref="logos"
-        class="flex items-center justify-center md:justify-start [&_li]:mx-15 [&_img]:max-w-none animate-infinite-scroll"
+        className="flex items-center justify-center md:justify-start [&_li]:mx-15 [&_img]:max-w-none animate-infinite-scroll"
       >
+        <li>
+          <div className="w-10 h-10 flex items-center justify-center">
+            <img src={lv} alt="lv" className="object-contain w-full h-full" />
+          </div>{" "}
+        </li>
+
         <li>
           <img src={facebook} alt="Facebook" />
         </li>
@@ -40,10 +62,22 @@ const LogoCarousel = () => {
           <img src={sass} alt="Sass" />
         </li>
         <li>
-          <img src={quora} alt="Quora" />
+          <img src={gucci} alt="gucci" />
         </li>
         <li>
-          <img src={sass} alt="Sass" />
+          <img src={balenciaga} alt="balenciaga" />
+        </li>
+        <li>
+          <img src={vs} alt="vs" />
+        </li>
+        <li>
+          <img src={dior} alt="dior" />
+        </li>
+        <li>
+          <img src={ysl} alt="ysl" />
+        </li>
+        <li>
+          <img src={horse} alt="horse" />
         </li>
       </ul>
     </div>

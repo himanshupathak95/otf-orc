@@ -20,10 +20,12 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="flex relative z-6 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
+        <div className="flex relative z-6 max-w-[62rem] mx-auto justify-center  text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem] ">
           <h1 className="h1 mb-6 font-sans">
-            Explore the Possibilities of&nbsp;AI&nbsp;Chatting with {` `}
-            <span className="font-code font-extralight  uppercase inline-block relative">
+            {"EXPERIENCE THE DIFFERENCE, "}
+            <br />
+            {" LUXURY MADE "} &nbsp;
+            <span className="font-code font-light  inline-block relative text-8xl">
               Extravagant{" "}
               <img
                 src={curve}
@@ -62,7 +64,7 @@ const Hero = () => {
                 <ScrollParallax isAbsolutelyPositioned>
                   <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title='#1 Trending Now'
+                    title="#1 Trending Now"
                   />
                 </ScrollParallax>
               </div>
