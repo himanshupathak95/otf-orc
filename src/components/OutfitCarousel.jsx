@@ -7,7 +7,7 @@ export default function OutfitCarousel() {
       transition={{ duration: 2 }} 
       className="rounded-2xl"
       autoplay={true}
-      autoplayDelay={7000}
+      autoplayDelay={6000}
       loop={true} 
       nextArrow={false}
       prevArrow={false}

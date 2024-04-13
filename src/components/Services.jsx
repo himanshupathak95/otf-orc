@@ -3,7 +3,6 @@ import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import {
-  PhotoChatMessage,
   Gradient,
   VideoBar,
   VideoChatMessage,
@@ -73,7 +72,6 @@ const Services = () => {
                 </p>
               </div>
 
-              <PhotoChatMessage />
             </div>
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
