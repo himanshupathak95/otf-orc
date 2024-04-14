@@ -5,7 +5,7 @@ import Paragraphs from "./Paragraphs";
 import DragAndDropArea from "./DragAndDropArea";
 import { uploadFile } from "../../uploadFile";
 import Button from "./Button";
-import { Gradient } from "./design/Hero";
+import { Gradient, BackgroundCircles } from "./design/Hero";
 
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);
@@ -73,6 +73,7 @@ const FileUpload = () => {
       <Alternatives responseData={responseData} isLoading={isLoading} />
 
       <Gradient />
+      <BackgroundCircles />
       <Button
         onClick={() => {
           window.location.reload();
