@@ -81,6 +81,10 @@ export const brainwaveServices = [
   "Photo generating",
   "Photo enhance",
   "Seamless Integration",
+  "Seamless Integration",
+  "Seamless Integration",
+  "Seamless Integration",
+  "Seamless Integration",
 ];
 
 export const brainwaveServicesIcons = [
