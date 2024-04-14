@@ -79,6 +79,24 @@ const LogoCarousel = () => {
         <li>
           <img src={horse} alt="horse" />
         </li>
+        <li>
+          <img src={facebook} alt="Facebook" />
+        </li>
+        <li>
+          <img src={disney} alt="Disney" />
+        </li>
+        <li>
+          <img src={airbnb} alt="Airbnb" />
+        </li>
+        <li>
+          <img src={apple} alt="Apple" />
+        </li>
+        <li>
+          <img src={spark} alt="Spark" />
+        </li>
+        <li>
+          <img src={samsung} alt="Samsung" />
+        </li>
       </ul>
     </div>
   );
