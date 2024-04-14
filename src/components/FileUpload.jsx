@@ -4,6 +4,8 @@ import Alternatives from "./Alternatives";
 import Paragraphs from "./Paragraphs";
 import DragAndDropArea from "./DragAndDropArea";
 import { uploadFile } from "../../uploadFile";
+import Button from "./Button";
+import { Gradient } from "./design/Hero";
 
 const FileUpload = () => {
   const [highlight, setHighlight] = useState(false);
@@ -69,7 +71,22 @@ const FileUpload = () => {
       />
       <RadialProgressBar responseData={responseData} isLoading={isLoading} />
       <Alternatives responseData={responseData} isLoading={isLoading} />
-      {console.log(responseData)}
+
+      <Gradient />
+      <Button
+        onClick={() => {
+          window.location.reload();
+        }}
+      >
+        Upload Another Image
+      </Button>
+      <Button
+        onClick={() => {
+          window.scrollTo(0, 0);
+        }}
+      >
+        Go to top
+      </Button>
     </>
   );
 };

@@ -1,10 +1,10 @@
 import React from "react";
 import { ListSkeleton } from "./Skeleton";
 
-const getAlternatives = (responseData) =>
-  responseData
-    .substring(responseData.indexOf("*"), responseData.length)
-    .split(".\n");
+const getAlternatives = (responseData) => {
+  const startIndex = responseData.includes('*') ? responseData.indexOf("*") : responseData.indexOf("Here");
+  return responseData.substring(startIndex).split(".\n");
+};
 
 const Alternatives = ({ responseData, isLoading }) => {
   return (
