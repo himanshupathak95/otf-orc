@@ -8,7 +8,7 @@ const getAlternatives = (responseData) => {
 
 const Alternatives = ({ responseData, isLoading }) => {
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex z-6 justify-center w-full">
       <div className="outline outline-1 outline-white/20 outline-offset-4 rounded-3xl p-4 flex-1 ml-3 mt-3">
         {isLoading && <ListSkeleton />}
         {responseData && !isLoading && (

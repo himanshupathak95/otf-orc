@@ -8,7 +8,7 @@ const getParagraphs = (responseData) =>
 
 const Paragraphs = ({ showInstructions, responseData, isLoading }) => {
   return (
-    <div className="ml-3 text-white transition-opacity duration-300 outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-centre">
+    <div className="ml-3 z-6 text-white transition-opacity duration-300 outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-centre">
       {showInstructions && (
         <p className="flex items-center justify-center h-full text-center">
           Instructions: Drag and drop your image here...

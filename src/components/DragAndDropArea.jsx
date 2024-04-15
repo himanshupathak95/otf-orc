@@ -16,7 +16,7 @@ const DragAndDropArea = ({
       onDragLeave={handleLeave}
       onDragOver={handleOver}
       onDrop={handleUpload}
-      className={`flex items-center justify-center w-98 h-[75vh] text-white  bg-transparent rounded-3xl relative overflow-hidden outline outline-1 outline-white/20 outline-offset-4
+      className={`flex z-6 items-center justify-center w-98 h-[75vh] text-white  bg-transparent rounded-3xl relative overflow-hidden outline outline-1 outline-white/20 outline-offset-4
                 ${highlight ? "bg-blue-500/50" : ""} 
                 ${drop ? "opacity-70" : ""}`}
     >

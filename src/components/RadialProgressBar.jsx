@@ -36,7 +36,7 @@ const Radial = ({ rating }) => {
 
 const RadialProgressBar = ({ responseData, isLoading }) => {
   return (
-    <div className="flex text-white outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
+    <div className="flex z-6 text-white outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-center justify-center mt-3 h-[60vh]">
       {!responseData && <Radial rating={0} />}
       {responseData && !isLoading && (
         <Radial rating={getRating(responseData)} />
