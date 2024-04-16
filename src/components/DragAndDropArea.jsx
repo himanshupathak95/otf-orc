@@ -29,9 +29,9 @@ const DragAndDropArea = ({
       )}
       <form className="form">
         <p className={`text-sm text-white ${drop ? "opacity-0" : ""}`}>
-          Drag and Drop image here<br/>
+          Drag and Drop here<br/>
           Maximum size allowed: 10MB<br/>
-          File Types allowed: jpeg, jpg, png
+          File types allowed: jpeg, jpg, png
           
         </p>
         <div className="upload-button-wrap absolute bottom-0 left-0 w-52">
