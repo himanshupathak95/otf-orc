@@ -11,7 +11,10 @@ const Paragraphs = ({ showInstructions, responseData, isLoading }) => {
     <div className="ml-3 z-6 text-white transition-opacity duration-300 outline outline-1 outline-white/20 outline-offset-4 rounded-3xl items-centre">
       {showInstructions && (
         <p className="flex items-center justify-center h-full text-center">
-          Instructions: Drag and drop your image here...
+          How It Works: <br/>
+          Just upload an image of yourself<br/> 
+          in your clearly visible outfit <br/>
+          and we'll do the rest for you!
         </p>
       )}
       {isLoading && (

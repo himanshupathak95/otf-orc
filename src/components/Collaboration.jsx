@@ -10,7 +10,7 @@ const Collaboration = () => {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seamless collaboration
+          Fashion AI to Streamline Your Wardrobe Choices
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -32,7 +32,7 @@ const Collaboration = () => {
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
-            {collabText}
+          Optimized with AI and robust security, perfect for style-savvy teams aiming to elevate their outfit game.
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100">

@@ -78,13 +78,13 @@ export const notificationImages = [notification4, notification3, notification2];
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
 export const brainwaveServices = [
-  "Photo generating",
-  "Photo enhance",
-  "Seamless Integration",
-  "Seamless Integration",
-  "Seamless Integration",
-  "Seamless Integration",
-  "Seamless Integration",
+  "Curates wardrobe outfits",
+  "Matches weather and occasion",
+  "Reflects personal style",
+  "Suggests new items",
+  "Rates outfit combinations",
+  "Automatic load scaling",
+  "Powerful processing resources"
 ];
 
 export const brainwaveServicesIcons = [
@@ -132,7 +132,7 @@ export const roadmap = [
 ];
 
 export const collabText =
-  "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
+  "Seamlessly combining sophisticated algorithms with secure technology for a smarter wardrobe management experience.";
 
 export const collabContent = [
   {
@@ -213,21 +213,21 @@ export const pricing = [
   {
     id: "0",
     title: "Basic",
-    description: "AI chatbot, personalized recommendations",
+    description: "Personalized recommendations",
     price: "0",
     features: [
-      "An AI chatbot that can understand your queries",
       "Personalized recommendations based on your preferences",
+      "An AI interface that can understand your queries",
       "Ability to explore the app and its features without any cost",
     ],
   },
   {
     id: "1",
     title: "Premium",
-    description: "Advanced AI chatbot, priority support, analytics dashboard",
+    description: "Advanced Personalized Recommendations, Priority Support, Analytics Dashboard",
     price: "9.99",
     features: [
-      "An advanced AI chatbot that can understand complex queries",
+      "Advanced Personalized recommendations based on your preferences",
       "An analytics dashboard to track your conversations",
       "Priority support to solve issues quickly",
     ],
@@ -235,12 +235,12 @@ export const pricing = [
   {
     id: "2",
     title: "Enterprise",
-    description: "Custom AI chatbot, advanced analytics, dedicated account",
+    description: "Custom Personalized recommendations, Advanced Analytics, Dedicated Account",
     price: null,
     features: [
-      "An AI chatbot that can understand your queries",
-      "Personalized recommendations based on your preferences",
-      "Ability to explore the app and its features without any cost",
+      "Custom Advanced Personalized recommendations based on your preferences",
+      "Custom logs and analytics dashboard to track your conversations",
+      "Advanced Priority support to solve issues quickly",
     ],
   },
 ];
@@ -248,16 +248,16 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Personalized Outfit Recommendations",
+    text: "Utilizes advanced AI algorithms to suggest daily outfits tailored to user preferences, weather conditions, and occasion requirements, optimizing the utility of the existing wardrobe.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "1",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Interactive Style Rating System",
+    text: "Features a sophisticated rating system where outfits are evaluated based on looks, elegance, style, and simplicity, helping users understand the strengths of their wardrobe choices.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -265,16 +265,16 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "Connect everywhere",
-    text: "Connect with the AI chatbot from anywhere, on any device, making it more accessible and convenient.",
+    title: "Wardrobe Gap Analytic Suggestions",
+    text: "Identifies missing essentials and recommends new items to purchase, ensuring the user's wardrobe is versatile and up-to-date with current fashion trends.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
     id: "3",
-    title: "Fast responding",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Style Evolution Tracking",
+    text: "Monitors changes in user preferences and evolving trends to dynamically adjust recommendations, ensuring that the app remains relevant to the user's changing tastes.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -282,16 +282,16 @@ export const benefits = [
   },
   {
     id: "4",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Sustainable Fashion",
+    text: "Recommends environmentally sustainable and ethically made clothing options, aligning with the user’s values and promoting responsible fashion consumption.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "5",
-    title: "Improve everyday",
-    text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
+    title: "Real-Time Updates",
+    text: "Integrates real-time data from fashion shows and trending social media content to suggest trendy and up-to-date styles, keeping users in sync with the latest fashion.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,

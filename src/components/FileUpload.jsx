@@ -86,7 +86,7 @@ const FileUpload = () => {
           window.scrollTo(0, 0);
         }}
       >
-        Go to top
+        Go to the top
       </Button>
     </>
   );
